@@ -114,12 +114,12 @@ export default function Album() {
         <Container className={classes.cardGrid} maxWidth="md">
           {/* End hero unit */}
           <Grid container spacing={4}>
-            {cards.map((card) => (
+            {cards.map((card, index) => (
               <Grid item key={card} xs={12} sm={6} md={4}>
                 <Card className={classes.card}>
                   <CardMedia
                     className={classes.cardMedia}
-                    image="https://api.unsplash.com/photos/random"
+                    image={`https://picsum.photos/200/300?random=${index+1}`}
                     title="Image title"
                   />
                   <CardContent className={classes.cardContent}>
