@@ -1,12 +1,12 @@
 import React, { lazy, Suspense, useEffect, useState } from "react";
 import { Router, Switch, Route, Redirect } from "react-router-dom";
-import Header from "./components/Header";
+import Progress from "./components/Progress";
+import { createBrowserHistory } from "history";
 import {
   createGenerateClassName,
   StylesProvider,
 } from "@material-ui/core/styles";
-import Progress from "./components/Progress";
-import { createBrowserHistory } from "history";
+import Header from "./components/Header";
 
 const AuthLazy = lazy(() => import("./components/AuthApp"));
 const MarketingLazy = lazy(() => import("./components/MarketingApp"));
